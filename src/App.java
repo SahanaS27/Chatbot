@@ -26,6 +26,7 @@ public class App {
 
                         String menuResp = (myObj.nextLine()).toLowerCase();
                         if(menuResp.equals("q")){
+                            p=1;
                             chatbot.quit();
                             w=1;
                             return;
@@ -34,6 +35,7 @@ public class App {
 
                         // }
                         else if (menuResp.contains("cake")||menuResp.contains("world")||menuResp.contains("famous")){
+                            p=1;
                             chatbot.cake(myObj);
                             int y = chatbot.finishCheck(myObj);
                                 if(y==1){
@@ -44,6 +46,7 @@ public class App {
                         }
                         else if(menuResp.contains("sund")){
                             chatbot.sundae(myObj);
+                            p=1;
                             int y = chatbot.finishCheck(myObj);
                             if(y==1){
                                 chatbot.finish();
@@ -51,6 +54,7 @@ public class App {
                             }
                             }
                         else if(menuResp.contains("scoop")){
+                            p=1;
                             chatbot.scoops(myObj);
                             int y = chatbot.finishCheck(myObj);
                             if(y==1){
@@ -59,6 +63,7 @@ public class App {
                             }
                         }
                         else if(menuResp.contains("order")|| menuResp.contains("ye")||menuResp.contains("ice")||menuResp.contains("ok")){
+                            p=1;
                             chatbot.order();
                             String orderResp = (myObj.nextLine()).toLowerCase();
                             if(orderResp.equals("q")){
@@ -68,6 +73,7 @@ public class App {
                             }
                             
                             else if(orderResp.contains("recc") || orderResp.contains("sugg")||orderResp.contains("think")){
+                                p=1;
                                 System.out.println("I recommend trying one of our world-famous ice cream cakes! Would you like one?"+chatbot.getWhite());
                                 String suggResp = (myObj.nextLine()).toLowerCase();
                                 if(suggResp.equals("q")){
@@ -92,6 +98,8 @@ public class App {
                                 }
                             }
                             else if (orderResp.contains("cake")||orderResp.contains("world")||orderResp.contains("famous")){
+                                
+                                p=1;
                                 chatbot.cake(myObj);
                                 int y = chatbot.finishCheck(myObj);
                                 if(y==1){
@@ -100,7 +108,8 @@ public class App {
                                 }
                             }
                             else if(orderResp.contains("sund")){
-                                chatbot.sundae(myObj);
+                                
+                                p=1;chatbot.sundae(myObj);
                                 int y = chatbot.finishCheck(myObj);
                                 if(y==1){
                                     chatbot.finish();
@@ -108,7 +117,7 @@ public class App {
                                 } 
                             }
                             else if(orderResp.contains("scoop")){
-                                chatbot.scoops(myObj);
+                                p=1;chatbot.scoops(myObj);
                                 int y = chatbot.finishCheck(myObj);
                                 if(y==1){
                                     chatbot.finish();
