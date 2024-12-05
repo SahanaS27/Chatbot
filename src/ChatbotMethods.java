@@ -162,11 +162,11 @@ public class ChatbotMethods {
             while (scoops == 0) {
             System.out.println(CYAN+" How many scoops would you like? One, two, or three?"+WHITE + "");
             scooptemp = (myObj.nextLine()).toLowerCase();
-              if (scooptemp.equals("one") || scooptemp.equals("1")) {
+              if (scooptemp.contains("one") || scooptemp.contains("1")) {
                 scoops = 1;
-              } else if (scooptemp.equals("two") || scooptemp.equals("2")) {
+              } else if (scooptemp.contains("two") || scooptemp.contains("2")) {
                 scoops = 2;
-              } else if (scooptemp.equals("three") || scooptemp.equals("3")) {
+              } else if (scooptemp.contains("three") || scooptemp.contains("3")) {
                 scoops = 3;
               } else {
                 System.out.println(CYAN+errorMessages()+"Please type one, two, or three!"+WHITE + "");

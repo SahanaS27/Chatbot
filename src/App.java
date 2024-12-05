@@ -160,6 +160,7 @@ public class App {
                 if(y==1){
                     chatbot.finish();
                     w = 1;
+                    
                 } 
             }
             else if(greetResp.contains("sund")){
@@ -168,6 +169,7 @@ public class App {
                 if(y==1){
                     chatbot.finish();
                     w = 1;
+                    
                 } 
             }
             else if(greetResp.contains("cake")||greetResp.contains("world")||greetResp.contains("famous")){
@@ -316,8 +318,9 @@ public class App {
                 }
                 
             }
-            int m = 0;
-            if (greetResp.contains("order")|| greetResp.contains("ye")||greetResp.contains("ice")||greetResp.contains("ok")){
+            
+            else if (greetResp.contains("order")|| greetResp.contains("ye")||greetResp.contains("ice")||greetResp.contains("ok")){
+                int m = 0;
                 chatbot.order();
                 while(m==0){
                 String orderResp = (myObj.nextLine()).toLowerCase();
